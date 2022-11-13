@@ -39,3 +39,41 @@ println "x is $x"
 
 def myCourse = "gradle"
 println "I'm training in: ${myCourse.toUpperCase()}"
+
+//Properties...
+
+class Person {                       
+
+    String name                      
+    Integer age
+    
+    Person(name, age) {          
+        this.name = name
+        this.age = age
+    }
+}
+
+def p = new Person("Fred", 35)
+println p.age
+p.age = 36
+println p.age
+
+// with a Map
+
+Map m = new HashMap()
+
+m.put("foo", "Fred")
+println m.get("foo")
+
+m.foo = "bill"
+m.bar = "Jane"
+m.baz = "Dave"
+
+m.foo
+m.bar
+m.baz
+
+println m.foo
+println m.bar
+println m.baz
+	

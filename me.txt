@@ -11,4 +11,5 @@ Starting a Gradle Build Script
 The 'return' statement in Groovy
 Lets discover 'types' in Groovy
 Lets see how Groovy 'Strings' work
+Groovy 'Properties'
     
