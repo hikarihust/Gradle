@@ -1,0 +1,4 @@
+                                            Setting up
+
+Installing the Java JDK and Eclipse IDE
+    
