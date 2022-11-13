@@ -9,4 +9,5 @@ Start using Gradle, Eclipse and the Buildship plugin
 
 Starting a Gradle Build Script
 The 'return' statement in Groovy
+Lets discover 'types' in Groovy
     

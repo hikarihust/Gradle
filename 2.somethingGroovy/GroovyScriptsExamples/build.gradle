@@ -16,7 +16,7 @@ sayHelloWorld()
 int doubleIt(int i) {
 	println(i)
 	i * 3
-	def y = i
+	int y = i
 }
 
 println doubleIt(2)
