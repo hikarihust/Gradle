@@ -3,3 +3,9 @@
 Installing the Java JDK and Eclipse IDE
 Start using Gradle, Eclipse and the Buildship plugin
     
+    ========================================================================================
+
+                                        Something Groovy
+
+Starting a Gradle Build Script
+    
