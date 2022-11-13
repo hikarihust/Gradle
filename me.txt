@@ -1,4 +1,5 @@
                                             Setting up
 
 Installing the Java JDK and Eclipse IDE
+Start using Gradle, Eclipse and the Buildship plugin
     
