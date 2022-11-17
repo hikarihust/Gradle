@@ -77,3 +77,91 @@ println m.foo
 println m.bar
 println m.baz
 	
+//Closures
+
+def echoIt = { parameter ->
+	println parameter
+}
+
+//called like a normal method
+echoIt("Hello World!")
+
+
+//with type Closure <Interface>
+Closure echoIt2 = { parameter ->
+	println parameter
+}
+
+//called like a normal method
+echoIt2("Hello World echoIt2!")
+
+//pass closures as parameters
+
+def oneArgMethod(closure) {
+	closure() * 2
+}
+
+println oneArgMethod {10}
+
+def twoArgMethod(factor, closure){
+	closure() * factor
+}
+
+println twoArgMethod(3, {10})
+
+twoArgMethod 3, {10}
+
+def i = oneArgMethod {
+	def y = 3
+	y * 2
+}
+
+assert i == 12
+
+//common uses for closure ... iterators!
+for (int j in [1,2,3]){
+	println j
+}
+
+[1,2,3].each {
+	println it
+}
+
+// Closure resolution
+class Person1 {                       
+    String name = "Fred"                     
+	Closure nameSayer = {
+		println name
+	}
+}
+
+def p1 = new Person1()
+p1.nameSayer()
+
+// Closed over a context
+def theName = "John"
+def sayName = {
+	println theName
+}
+sayName()
+theName = "Bill"
+sayName()
+
+class Person2 {                       
+    String theName                      
+    Integer theAge
+    Person2(theName, theAge) {          
+        this.theName = theName
+        this.theAge = theAge
+    }
+
+	def executeInside(Closure c){
+		c.delegate = this
+		c()
+	}
+}
+
+def p2 = new Person2("Fred 2", 35)
+println p2.theName
+
+p2.executeInside {println theName}
