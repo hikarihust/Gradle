@@ -13,4 +13,10 @@ Lets discover 'types' in Groovy
 Lets see how Groovy 'Strings' work
 Groovy 'Properties'
 Closures
+
+    ========================================================================================
+
+                                        Gradle under the hood
+
+Gradle Object Model
     
