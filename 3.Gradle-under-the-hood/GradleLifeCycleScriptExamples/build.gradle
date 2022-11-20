@@ -7,3 +7,7 @@ apply {
 }
 */
 println ">>> build.gradle --> This is executed during the configuration phase  - timestamp @ ${gradle.timestamp()}"
+
+logger.info ">>> build.gradle: $gradle.gradleVersion"
+logger.info ">>> build.gradle: $gradle.gradleHomeDir"
+logger.info ">>> build.gradle: $gradle.gradleUserHomeDir"
