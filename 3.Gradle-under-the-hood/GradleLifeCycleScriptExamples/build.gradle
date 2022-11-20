@@ -1,7 +1,9 @@
 // Core Gradle Objects
-
+/*
 logger.info "Hello!"
 
 apply {
 	println "Hello again!!"
 }
+*/
+println ">>> build.gradle --> This is executed during the configuration phase  - timestamp @ ${gradle.timestamp()}"
