@@ -22,4 +22,5 @@ Gradle Object Model
 Gradle Lifecycle
 Gradle Initialization Phase
 Gradle object and Gradle object
+Project object
     
