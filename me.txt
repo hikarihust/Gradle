@@ -23,4 +23,10 @@ Gradle Lifecycle
 Gradle Initialization Phase
 Gradle object and Gradle object
 Project object
+
+    ========================================================================================
+
+                                        Gradle Properties
+
+Gradle Properties
     
