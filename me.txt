@@ -29,4 +29,10 @@ Project object
                                         Gradle Properties
 
 Gradle Properties
+
+    ========================================================================================
+
+                                        Tasks & Actions
+
+Tasks and the Gradle Lifecycle
     
