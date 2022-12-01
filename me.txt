@@ -35,4 +35,10 @@ Gradle Properties
                                         Tasks & Actions
 
 Tasks and the Gradle Lifecycle
+
+    ========================================================================================
+
+                                        Task dependencies
+
+dependsOn
     

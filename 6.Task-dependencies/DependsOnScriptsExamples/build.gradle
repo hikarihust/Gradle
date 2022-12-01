@@ -1,0 +1,27 @@
+defaultTasks 'doFinished'
+
+logger.info ">>> build.gradle --> This is executed during the configuration phase  - timestamp @ ${gradle.timestamp()}"
+
+task doStartProcess {
+	doLast{
+		logger.info "$name - Now starting the process - OK!"
+	}
+}
+
+task doStep2{
+	doLast{
+		logger.info "$name - Performed OK!"
+	}
+}
+
+task doSomethingInTheMiddle (dependsOn: ['doStartProcess', 'doStep2']) {
+	doLast{
+		logger.info "$name - Performed the middle step - OK!"
+	}
+}
+
+task doFinished (dependsOn: ['doSomethingInTheMiddle', 'doStep2'])   {
+	doLast{
+		logger.info "$name - Done - OK!"
+	}	
+}
