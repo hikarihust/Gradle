@@ -14,17 +14,22 @@ task doStep2{
 	}
 }
 
-task doSomethingInTheMiddle (dependsOn: ['doStartProcess',  tasks.findAll { task -> task.name.startsWith('doStep2')  }  ]) {
+task doSomethingInTheMiddle {
 	doLast{
 		logger.info "$name - Performed the middle step - OK!"
 	}
 }
 
-task doFinished (dependsOn: ['doSomethingInTheMiddle', 'doStep2'])   {
+task doFinished (dependsOn: 'doSomethingInTheMiddle')   {
 	doLast{
 		logger.info "$name - Done - OK!"
 	}	
 }
 
 logger.info ">>> ${ project.tasks.findAll { task -> task.name.startsWith('doStep2')  }  }"
+
+//Conditional logic
+if ( Math.random() < 0.5){
+	doSomethingInTheMiddle.dependsOn doStartProcess, tasks.findAll { task -> task.name.startsWith('doStep2') }
+}
 	
