@@ -14,7 +14,7 @@ task doStep2{
 	}
 }
 
-task doSomethingInTheMiddle (dependsOn: ['doStartProcess', 'doStep2']) {
+task doSomethingInTheMiddle (dependsOn: ['doStartProcess',  tasks.findAll { task -> task.name.startsWith('doStep2')  }  ]) {
 	doLast{
 		logger.info "$name - Performed the middle step - OK!"
 	}
@@ -25,3 +25,6 @@ task doFinished (dependsOn: ['doSomethingInTheMiddle', 'doStep2'])   {
 		logger.info "$name - Done - OK!"
 	}	
 }
+
+logger.info ">>> ${ project.tasks.findAll { task -> task.name.startsWith('doStep2')  }  }"
+	
