@@ -50,4 +50,10 @@ Task Dependency Graph
                                         Plugin
 
 MyJavaGradleproject
+
+    ========================================================================================
+
+                                        Building Java Applications with Gradle
+
+3rd Part Dependencies
     
