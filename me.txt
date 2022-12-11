@@ -45,3 +45,9 @@ Filtering Tasks with dependsOn
 Using 'dependsOn' in conditional logic
 Task Dependency Graph
     
+    ========================================================================================
+
+                                        Plugin
+
+MyJavaGradleproject
+    
