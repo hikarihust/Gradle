@@ -56,4 +56,5 @@ MyJavaGradleproject
                                         Building Java Applications with Gradle
 
 3rd Part Dependencies
+Building our 1st java application
     
